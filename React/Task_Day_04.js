@@ -58,6 +58,8 @@ console.log(isTruthy(0));      // Falsy
 console.log(isTruthy(1));      // Truthy
 console.log(isTruthy(""));     // Falsy
 console.log(isTruthy("hi"));   // Truthy
+console.log(isTruthy(null));   // Falsy
+
 
 
 
