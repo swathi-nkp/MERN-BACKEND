@@ -51,7 +51,7 @@ let value1 = "10";
 let value2 = "hello";
 
 console.log(value1 * 2);
-console.log(value2 * 2);
+console.log(value2 * 2);// returns not a number
 
 //5.convert the text
 
@@ -76,16 +76,16 @@ console.log("modulus value =",num1%num2);
 let num_1 = 10;
 
 num_1 += 5;
-console.log("After +=5:",num_1);
+console.log("After +=5:",num_1); // 10 + 5 = 15
 
 num_1 -= 3;
-console.log("After -=3:",num_1);
+console.log("After -=3:",num_1); // 15 - 3 = 12
 
 num_1 *= 4;
-console.log("After *=4:",num_1);
+console.log("After *=4:",num_1); //12 * 4 = 48
 
 num_1 /= 5;
-console.log("After /=5:",num_1);
+console.log("After /=5:",num_1); //48 % 5 = 9.6
 
 //8.comparison operators
 
@@ -99,9 +99,9 @@ console.log(10 !== "10");  // true  → type is different
 let userAge = 20;
 let hasId = true;
 
-if (userAge > 18 && hasId){
+if (userAge > 18 && hasId){  // && and
     console.log("Eligible");    
-}else if (userAge < 18 || !hasId ){
+}else if (userAge < 18 || !hasId ){  // || 0r
     console.log("Not eligible");
     
 }
@@ -109,13 +109,13 @@ if (userAge > 18 && hasId){
 //10.output
 
 var a;
-console.log(a); // undefined
+console.log(a); // undefined // we did not assign it
 
 a = 5;
-console.log(a); //5
+console.log(a); //5  // its in gobal scope
 
 console.log(typeof NaN); //Number
-console.log(typeof null); //object
+console.log(typeof null); //object  
 
 
 
