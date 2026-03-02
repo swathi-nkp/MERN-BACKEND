@@ -36,6 +36,7 @@ const number = [1,2,3,4,5]
 const cutElement = number.slice(1,4); // cut the middle value
 
 console.log(cutElement); // cutted value
+console.log(number);// it does not affect the original value 
 
 // 5.splice
 
@@ -52,7 +53,7 @@ console.log(Num); // replace
 // 6.Concat
 
 const a = [1,2]
-const b = [3,4]
+const b = [3,4] 
 const merge = a.concat(b);
 console.log(merge);
 
@@ -86,9 +87,103 @@ console.log(opp); // reverse
 
 const id = [3,4,5,7,2,5,8]
 
-const final = id.indexOf(6,0)!==-1 ? "find" : "not found";
+const final = id.indexOf(4,0)!==-1 ? "find" : "not found";
 
 console.log(final);
+
+// Higher order methods
+
+//11.map()
+
+const arr = [1,2,3,4]
+
+const multipy = arr.map((num) => num*2) // multipy the each element
+
+console.log(multipy);
+
+//12.object ()map()
+
+const object = [
+ { name: "Sudhan", age: 22 },
+ { name: "Ravi", age: 25 }
+]
+
+const name = object.map((obj)=>obj.age) //obj valued the object value
+
+console.log(name); // print object name only 
+
+//13.filter()
+
+const fil = [10, 15, 20, 25, 30]
+
+const great = fil.filter((num)=>num >20) // check condition true returns it
+
+console.log(great);// return great 20
+
+//14.filter ()object()
+
+const product = [
+    {name:"laptop",Price:40000},
+    {name:"mouse",Price:10000},
+    {name:"keyboard",price:5000}
+]
+
+ const amt = product.filter(num => num.Price >10000)
+console.log(amt);
+
+//15. Reduce() Sum()
+
+const total = ["arr","obj","swa"]
+
+const add = total.reduce((a,b)=> a + b) 
+
+console.log(add); // reduce will returns the value into single value
+
+
+// 16. cart system 
+
+const pro = [
+               { name: "Mobile", price: 10000 },
+               { name: "Laptop", price: 50000 },
+               { name: "Headset", price: 2000 }
+            ]
+
+const proName = pro.map((num)=>num.name)
+const proPrice = pro.filter((num)=>num.price>5000)
+const prototal = pro.reduce((a,b)=> a+ b.price,0)
+const prolow = pro.some ((num)=>num.price < 3000)
+
+console.log(proName);
+console.log(proPrice);
+console.log(prototal);
+console.log(prolow);
+
+//17. student marks system
+
+const marks = [20,35,40,70,90,85,95]
+
+const above = marks.filter((mark)=>mark>70)
+const passed = marks.every((pass)=>pass>=35)
+const failed = marks.find((fail)=>fail<35)
+const ave = marks.reduce((a,b) => a+b,0 )
+const average = ave / marks.length
+
+console.log(above);
+console.log(passed);
+console.log(failed);
+console.log(average);
+
+// 20. flatten array 
+
+const convert = [[1,2], [3,4], [5]] 
+
+let concat = convert.reduce((a,b)=>{
+    return a.concat(b);
+},[])
+
+console.log(concat);
+
+
 
 
 
